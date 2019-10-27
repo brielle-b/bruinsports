@@ -1,0 +1,20 @@
+---
+title: "college sports data"
+author: "Brielle Balswick"
+date: "10/26/2019"
+output: html_document
+---
+
+
+```{r}
+library(devtools)
+install_github("mikeasilva/blsAPI")
+```
+
+```{r}
+library(readxl)
+Schools <- read_excel("/Users/briellebalswick/Downloads/EADA_2017-2018/Schools.xlsx")
+plot(lm(Schools$EFMaleCount~Schools$EFFemaleCount))
+
+```
+
